@@ -3,3 +3,6 @@ The program should return 0
 script 2: Write a function that prints the alphabet, in lowercase, followed by a new line.
 Prototype: void print_alphabet(void);
 You can only use _putchar twice in your code
+script 3: Write a function that prints 10 times the alphabet, in lowercase, followed by a new line.
+Prototype: void print_alphabet_x10(void);
+You can only use _putchar twice in your code
