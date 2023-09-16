@@ -21,4 +21,5 @@ int print_last_digit(int n)
 
 		return (i);
 	}
+	return (0);
 }
