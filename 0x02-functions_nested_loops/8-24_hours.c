@@ -30,9 +30,7 @@ void jack_bauer(void)
 					_putchar('0' + l);
 					_putchar('\n');
 					if (k == 5 && l == 9)
-					{
 						break;
-					}
 					if (l != 9)
 					{
 						_putchar('0' + i);
@@ -43,9 +41,7 @@ void jack_bauer(void)
 				}
 			}
 			if (i == 2 && j == 3)
-			{
 				break;
-			}
 			if (j != 9)
 			{
 				_putchar('0' + i);
