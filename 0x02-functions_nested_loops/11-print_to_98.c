@@ -10,7 +10,7 @@
  */
 void print_to_98(int n)
 {
-	for (; n > 98; n--)
+	while (n > 98)
 	{
 		if (n >= 100)
 		{_putchar('0' + (n / 100));
@@ -21,7 +21,7 @@ void print_to_98(int n)
 			_putchar('0' + (n / 10));
 			_putchar('0' + (n % 10)); }
 			printf(", ");
-	}
+	n--; }
 	for (; n < 98; n++)
 	{
 		if (n >= -99 && n <= -10 && n < 0)
