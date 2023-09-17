@@ -9,50 +9,43 @@
  */
 void print_to_98(int n)
 {
-	while (n > 98)
+	for (; n > 98; n--)
 	{
 		if (n >= 100)
-		{
-			_putchar('0' + n / 100);
+		{_putchar('0' + n / 100);
 			_putchar('0' + (n / 10) % 10);
 			_putchar('0' + n % 10); }
 		else
-		{
-			_putchar('0' + n / 10);
+		{_putchar('0' + n / 10);
 			_putchar('0' + n % 10); }
-			_putchar(',');
-			_putchar(' ');
-			n--; }
-	while (n < 98)
+			printf(", "); }
+	for (; n < 98; n++)
 	{
-		if (n <= -10 && n > 0)
-		{
-			_putchar('-');
+		if (n >= -99)
+		{_putchar('-');
 			_putchar('0' + (n * -1) / 10);
 			_putchar('0' + (n * -1) % 10);
-			_putchar(',');
-			_putchar(' '); }
+			printf(", "); }
+		else if (n < -99)
+		{_putchar('-');
+			_putchar('0' + (n * -1) / 100);
+			_putchar('0' + ((n * -1) / 10) % 10);
+			_putchar('0' + (n * -1) % 10);
+			printf(", ") }
 		else if (n > -10 && n < 0)
-		{
-			_putchar('-');
+		{_putchar('-');
 			_putchar('0' + (n * -1));
-			_putchar(',');
-			_putchar(' '); }
+			printf(", ")}
 		if (n <= 9 && n >= 0)
-		{
-			_putchar('0' + n);
+		{_putchar('0' + n);
 			_putchar(',');
 			_putchar(' '); }
 		if (n >= 10)
-		{
-			_putchar('0' + n / 10);
+		{_putchar('0' + n / 10);
 			_putchar('0' + n % 10);
 			_putchar(',');
-			_putchar(' '); }
-			n++; }
+			_putchar(' '); } }
 		if (n == 98)
-		{
-			_putchar('0' + n / 10);
+		{_putchar('0' + n / 10);
 			_putchar('0' + n % 10);
-			_putchar('\n'); }
-}
+			_putchar('\n'); } }
