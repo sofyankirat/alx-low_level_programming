@@ -22,12 +22,12 @@ void print_to_98(int n)
 			printf(", "); }
 	for (; n < 98; n++)
 	{
-		if (n >= -99)
+		if (n >= -99 && n <= -10 && n < 0)
 		{_putchar('-');
 			_putchar('0' + (n * -1) / 10);
 			_putchar('0' + (n * -1) % 10);
 			printf(", "); }
-		else if (n < -99)
+		else if (n < -99 && n <= -10 && n < 0)
 		{_putchar('-');
 			_putchar('0' + (n * -1) / 100);
 			_putchar('0' + ((n * -1) / 10) % 10);
