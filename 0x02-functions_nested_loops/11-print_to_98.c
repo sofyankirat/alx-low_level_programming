@@ -41,7 +41,7 @@ void print_to_98(int n)
 			printf(", "); }
 		if (n <= 9 && n >= 0)
 		{_putchar('0' + n);
-			printf(", ") }
+			printf(", "); }
 		if (n >= 10)
 		{_putchar('0' + n / 10);
 			_putchar('0' + n % 10);
