@@ -44,8 +44,8 @@ void print_times_table(int n)
 				_putchar('0' + (i * j) % 10);
 			if (j != n)
 			{_putchar(',');
-				_putchar(' '); }
+				_putchar(' '); } }
 			if (j == n)
-			{_putchar('\n'); }
+				_putchar('\n');
 			j++; }
 			i++; } } } }
