@@ -48,4 +48,4 @@ void print_times_table(int n)
 			if (j == n)
 				_putchar('\n');
 			j++; }
-			i++; } } } }
+			i++; } } }
