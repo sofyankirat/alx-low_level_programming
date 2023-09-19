@@ -12,7 +12,7 @@
 
 int main(void)
 {
-	long int pro1, pro2 = 2, pro3 = 1, i = 1, h1, h2, h3, h4, h5, h6;
+	unsigned long int pro1, pro2 = 2, pro3 = 1, i = 1, h1, h2, h3, h4, h5, h6;
 
 	printf("1, ");
 	printf("2, ");
