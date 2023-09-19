@@ -19,10 +19,22 @@ int main(void)
 	while (i <= 32)
 	{
 		pro1 = pro2 + pro3;
+		if (pro1 >= 12300000000000000000)
+		{
+			pro1 = pro1 + 1;
+		}
 		printf("%.0Lf, ", pro1);
 		pro3 = pro1 + pro2;
+		if (pro3 >= 12300000000000000000)
+		{
+			pro3 = pro3 + 1;
+		}
 		printf("%.0Lf, ", pro3);
 		pro2 = pro3 + pro1;
+		if (pro2 >= 12300000000000000000)
+		{
+			pro2 = pro2 + 1;
+		}
 		if (i != 32)
 		{
 			printf("%.0Lf, ", pro2);
