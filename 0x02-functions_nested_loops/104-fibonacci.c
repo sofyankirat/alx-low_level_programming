@@ -18,16 +18,16 @@ int main(void)
 	printf("2, ");
 	while (i <= 32)
 	{pro1 = pro2 + pro3;
-		if (i <= 30)
+		if (i < 30)
 		{printf("%lu, ", pro1); }
-		else if (i > 30)
+		else if (i >= 30)
 		{h1 = pro1 / 10000000000;
 			h2 = pro1 % 10000000000;
 			printf("%lu%lu, ", h1, h2); }
 		pro3 = pro1 + pro2;
-		if (i <= 30)
+		if (i < 30)
 		{printf("%lu, ", pro3); }
-		else if (i > 30)
+		else if (i >= 30)
 		{h3 = pro3 / 10000000000;
 			h4 = pro3 % 10000000000;
 			printf("%lu%lu, ", h3, h4); }
