@@ -15,7 +15,10 @@ int main(void)
 
 	while (i * 3 < 1024)
 	{
+		if ((i * 3) % 5 != 0)
+		{
 		product_1 = product_1 + (i * 3);
+		}
 		i++;
 	}
 	while (j * 5 < 1024)
