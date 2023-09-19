@@ -12,26 +12,24 @@
 
 int main(void)
 {
-	int pro1, pro2 = 1, pro3 = 0;
+	int pro1, pro2 = 2, pro3 = 1;
 
-	while (pro3 <= 20365011074)
+	printf("1, ");
+	printf("2, ");
+	for (int i = 1; i <= 16; i++)
 	{
-		if (pro3 == 20365011074)
-		{
-			printf("%u\n", pro3);
-			break;
-		}
 		pro1 = pro2 + pro3;
 		printf("%u, ", pro1);
 		pro3 = pro1 + pro2;
-		if (pro3 != 20365011074)
-		{
-			printf("%u, ", pro3);
-		}
-		if (pro3 != 20365011074)
-		{
+		printf("%u, ", pro3);
 		pro2 = pro3 + pro1;
-		printf("%u, ", pro2);
+		if (i != 16)
+		{
+			printf("%u, ", pro2);
+		}
+		else
+		{
+			printf("%u\n, ", pro2);
 		}
 	}
 	return (0);
