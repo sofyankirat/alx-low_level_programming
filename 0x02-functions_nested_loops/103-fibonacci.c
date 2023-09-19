@@ -34,6 +34,6 @@ int main(void)
 		}
 		i++;
 	}
-	printf("%lld\n", 2 + sum1 + sum2 + sum3);
+	printf("%ld\n", 2 + sum1 + sum2 + sum3);
 	return (0);
 }
