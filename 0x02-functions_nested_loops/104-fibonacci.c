@@ -17,23 +17,28 @@ int main(void)
 	printf("1, ");
 	printf("2, ");
 	while (i <= 32)
-	{
-		pro1 = pro2 + pro3;
-		if (pro1 >= 12300000000000000000)
+	{pro1 = pro2 + pro3;
+		if (i == 31)
+		{pro1 = pro1 - 1; }
+		if (i == 32)
 		{
 			pro1 = pro1 + 1;
 		}
 		printf("%.0Lf, ", pro1);
 		pro3 = pro1 + pro2;
-		if (pro3 >= 12300000000000000000)
+		if (i == 31)
+		{
+			pro3 = pro3 - 1;
+		}
+		if (i == 32)
 		{
 			pro3 = pro3 + 1;
 		}
 		printf("%.0Lf, ", pro3);
 		pro2 = pro3 + pro1;
-		if (pro2 >= 12300000000000000000)
+		if (i == 31)
 		{
-			pro2 = pro2 + 1;
+			pro2 = pro2 + 2;
 		}
 		if (i != 32)
 		{
