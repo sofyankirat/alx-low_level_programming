@@ -29,7 +29,7 @@ int main(void)
 		}
 		else
 		{
-			printf("%ld\n, ", pro2);
+			printf("%ld\n", pro2);
 		}
 		i++;
 	}
