@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdint.h>
 #include "main.h"
 
 /**
@@ -11,24 +12,24 @@
 
 int main(void)
 {
-	long int pro1, pro2 = 2, pro3 = 1, i = 1;
+	intmax_t pro1, pro2 = 2, pro3 = 1, i = 1;
 
 	printf("1, ");
 	printf("2, ");
 	while (i <= 32)
 	{
 		pro1 = pro2 + pro3;
-		printf("%lu, ", pro1);
+		printf("%ju, ", pro1);
 		pro3 = pro1 + pro2;
-		printf("%lu, ", pro3);
+		printf("%ju, ", pro3);
 		pro2 = pro3 + pro1;
 		if (i != 32)
 		{
-			printf("%lu, ", pro2);
+			printf("%ju, ", pro2);
 		}
 		else
 		{
-			printf("%lu\n", pro2);
+			printf("%ju\n", pro2);
 			break;
 		}
 		i++;
