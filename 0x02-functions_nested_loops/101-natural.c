@@ -10,16 +10,21 @@
 */
 int main(void)
 {
-	int product_1 = 0, product_2 = 0, sum;
+	int product_1 = 0, product_2 = 0, sum, i = 1;
 
-	for (int i = 1; product_1 <= 1024; i++)
+	for (product_1 <= 1024)
 	{
 		product_1 = product_1 + (i * 3);
+		i++;
 	}
-	for (int j = 1; product_2 <= 1024; j++)
+	int j = 1;
+
+	while (product_2 <= 1024)
 	{
 		product_2 = product_2 + (j * 5);
+		j++;
 	}
 	sum == product_1 + product_2;
 	printf("%d\n", sum);
+	return (0);
 }
