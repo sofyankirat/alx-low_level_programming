@@ -11,15 +11,13 @@
 */
 int main(void)
 {
-	int product_1 = 0, product_2 = 0, sum, i = 1;
+	int product_1 = 0, product_2 = 0, sum, i = 1, j = 1;
 
 	while (product_1 <= 1024)
 	{
 		product_1 = product_1 + (i * 3);
 		i++;
 	}
-	int j = 1;
-
 	while (product_2 <= 1024)
 	{
 		product_2 = product_2 + (j * 5);
