@@ -12,41 +12,24 @@
 
 int main(void)
 {
-	long double pro1, pro2 = 2, pro3 = 1, i = 1;
+	unsigned long pro1, pro2 = 2, pro3 = 1, i = 1;
 
 	printf("1, ");
 	printf("2, ");
 	while (i <= 32)
-	{pro1 = pro2 + pro3;
-		if (i == 31)
-		{pro1 = pro1 - 1; }
-		if (i == 32)
-		{
-			pro1 = pro1 + 1;
-		}
-		printf("%.0Lf, ", pro1);
+	{
+		pro1 = pro2 + pro3;
+		printf("%lu, ", pro1);
 		pro3 = pro1 + pro2;
-		if (i == 31)
-		{
-			pro3 = pro3 - 1;
-		}
-		if (i == 32)
-		{
-			pro3 = pro3 + 1;
-		}
-		printf("%.0Lf, ", pro3);
+		printf("%lu, ", pro3);
 		pro2 = pro3 + pro1;
-		if (i == 31)
-		{
-			pro2 = pro2 + 2;
-		}
 		if (i != 32)
 		{
-			printf("%.0Lf, ", pro2);
+			printf("%lu, ", pro2);
 		}
 		else
 		{
-			printf("%.0Lf\n", pro2);
+			printf("%lu\n", pro2);
 			break;
 		}
 		i++;
