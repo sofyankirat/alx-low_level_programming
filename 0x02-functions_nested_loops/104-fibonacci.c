@@ -11,11 +11,11 @@
 
 int main(void)
 {
-	long int pro1, pro2 = 2, pro3 = 1;
+	long int pro1, pro2 = 2, pro3 = 1, i = 1;
 
 	printf("1, ");
 	printf("2, ");
-	for (int i = 1; i <= 32; i++)
+	while (i <= 32)
 	{
 		pro1 = pro2 + pro3;
 		printf("%lu, ", pro1);
@@ -31,6 +31,7 @@ int main(void)
 			printf("%lu\n", pro2);
 			break;
 		}
+		i++;
 	}
 	return (0);
 }
