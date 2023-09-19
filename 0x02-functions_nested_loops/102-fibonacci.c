@@ -12,11 +12,11 @@
 
 int main(void)
 {
-	int pro1, pro2 = 2, pro3 = 1;
+	int pro1, pro2 = 2, pro3 = 1, i = 1;
 
 	printf("1, ");
 	printf("2, ");
-	for (int i = 1; i <= 16; i++)
+	while (i <= 16)
 	{
 		pro1 = pro2 + pro3;
 		printf("%u, ", pro1);
@@ -31,6 +31,7 @@ int main(void)
 		{
 			printf("%u\n, ", pro2);
 		}
+		i++;
 	}
 	return (0);
 }
