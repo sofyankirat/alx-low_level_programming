@@ -1,5 +1,6 @@
-#include "main.h"
 #include <stdio.h>
+
+#include "main.h"
 
 /**
  * main - Entry point
@@ -24,7 +25,7 @@ int main(void)
 		product_2 = product_2 + (j * 5);
 		j++;
 	}
-	sum == product_1 + product_2;
+	sum = product_1 + product_2;
 
 	printf("%d\n", sum);
 	return (0);
