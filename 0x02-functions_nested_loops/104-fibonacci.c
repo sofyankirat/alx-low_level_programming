@@ -19,17 +19,17 @@ int main(void)
 	while (i <= 32)
 	{
 		pro1 = pro2 + pro3;
-		printf("%Lf, ", pro1);
+		printf("%.0Lf, ", pro1);
 		pro3 = pro1 + pro2;
-		printf("%Lf, ", pro3);
+		printf("%.0Lf, ", pro3);
 		pro2 = pro3 + pro1;
 		if (i != 32)
 		{
-			printf("%Lf, ", pro2);
+			printf("%.0Lf, ", pro2);
 		}
 		else
 		{
-			printf("%Lf\n", pro2);
+			printf("%.0Lf\n", pro2);
 			break;
 		}
 		i++;
