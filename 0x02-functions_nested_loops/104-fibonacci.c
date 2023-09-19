@@ -12,24 +12,24 @@
 
 int main(void)
 {
-	intmax_t pro1, pro2 = 2, pro3 = 1, i = 1;
+	long double pro1, pro2 = 2, pro3 = 1, i = 1;
 
 	printf("1, ");
 	printf("2, ");
 	while (i <= 32)
 	{
 		pro1 = pro2 + pro3;
-		printf("%ju, ", pro1);
+		printf("%Lf, ", pro1);
 		pro3 = pro1 + pro2;
-		printf("%ju, ", pro3);
+		printf("%Lf, ", pro3);
 		pro2 = pro3 + pro1;
 		if (i != 32)
 		{
-			printf("%ju, ", pro2);
+			printf("%Lf, ", pro2);
 		}
 		else
 		{
-			printf("%ju\n", pro2);
+			printf("%Lf\n", pro2);
 			break;
 		}
 		i++;
