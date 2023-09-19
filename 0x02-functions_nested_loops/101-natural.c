@@ -12,7 +12,7 @@ int main(void)
 {
 	int product_1 = 0, product_2 = 0, sum, i = 1;
 
-	for (product_1 <= 1024)
+	while (product_1 <= 1024)
 	{
 		product_1 = product_1 + (i * 3);
 		i++;
@@ -25,6 +25,7 @@ int main(void)
 		j++;
 	}
 	sum == product_1 + product_2;
+
 	printf("%d\n", sum);
 	return (0);
 }
