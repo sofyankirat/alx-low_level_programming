@@ -22,9 +22,9 @@ void puts2(char *str)
 	{
 		i--;
 	}
-	while (str[i] != '\0' && i != 0)
+	while (str[i] != '\0')
 	{
-		if (i % 2 == 0)
+		if (i % 2 == 0 && str[j] != '\n')
 		{
 			_putchar(str[j]);
 		}
