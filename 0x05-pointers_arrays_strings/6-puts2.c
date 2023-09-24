@@ -24,10 +24,11 @@ void puts2(char *str)
 	}
 	while (str[i] != '\0')
 	{
-		if (i % 2 == 0 && str[j] != '\n')
+		if (i % 2 == 0 && i != 0)
 		{
 			_putchar(str[j]);
 		}
+		if (i == 0 && str[j] != '\0')
 		i--;
 		j++;
 	}
