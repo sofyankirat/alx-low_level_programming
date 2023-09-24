@@ -29,6 +29,9 @@ void puts2(char *str)
 			_putchar(str[j]);
 		}
 		if (i == 0 && str[j] != '\0')
+		{
+			_putchar(str[j]);
+		}
 		i--;
 		j++;
 	}
