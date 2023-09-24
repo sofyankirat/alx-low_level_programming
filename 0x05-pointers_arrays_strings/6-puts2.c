@@ -18,6 +18,10 @@ void puts2(char *str)
 		i++;
 	}
 	i--;
+	if (i % 2 == 0)
+	{
+		i--;
+	}
 	while (str[i] != '\0' && i != 0)
 	{
 		if (i % 2 == 0)
