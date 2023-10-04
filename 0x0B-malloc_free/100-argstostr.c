@@ -1,39 +1,56 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 /**
- * *_realloc - reallocate memory size function
- * @ptr: pointer to address of old memory location
- * @old_size: unsigned int type of old memory size
- * @new_size: unsigned int type for new memory size
- * Return:  return pointer to array
- */
+* argstostr - a function that concatenates all the arguments of your program
+*@ac: count of args passed to the function
+*@av:array of arguments
+*
+*Return: pointer to the new string
+*/
 
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+char *argstostr(int ac, char **av)
 {
-	char *s;
+		char *new_string = NULL;
+		int k = 0, i = ac, j, sum = 0, temp = 0;
 
-	if (new_size > old_size)
-	{
-		s = malloc(new_size);
-		free(ptr);
-		return (s);
-	}
-	if (new_size == old_size)
-	{
-		return (ptr);
-	}
-	if (ptr == NULL)
-	{
-		s = malloc(new_size);
-		free(ptr);
-		return (s);
-	}
-	if (new_size == 0 && ptr != NULL)
-	{
-		free(ptr);
-		return (NULL);
-	}
-	return (ptr);
+		if (ac == 0 || av == NULL)
+			return (NULL);
+
+		while (ac--)
+			sum += (len(av[ac]) + 1);
+		new_string = (char *) malloc(sum + 1);
+
+		if (new_string != NULL)
+		{
+			while (k < i)
+			{
+				for (j = 0; av[k][j] != '\0'; j++)
+					new_string[j + temp] = av[k][j];
+				new_string[temp + j] = '\n';
+				temp += (j + 1);
+				k++;
+			}
+			new_string[temp] = '\0';
+		}
+		else
+		{
+			return (NULL);
+		}
+		return (new_string);
+}
+
+/**
+*len - returns length of str
+*@str: string counted
+*Return: returns the length
+*/
+int len(char *str)
+{
+		int len = 0;
+
+		if (str != NULL)
+		{
+			while (str[len])
+				len++;
+		}
+	return (len);
 }
