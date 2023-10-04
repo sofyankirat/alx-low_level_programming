@@ -1,51 +1,39 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 /**
- * strtow - concatenates all the arguments of your program
- *@str: string
- * Return: a pointer to a new string
+ * *_realloc - reallocate memory size function
+ * @ptr: pointer to address of old memory location
+ * @old_size: unsigned int type of old memory size
+ * @new_size: unsigned int type for new memory size
+ * Return:  return pointer to array
  */
-char **strtow(char *str)
-{
-	int i = 0, w = 0, j = 0, k, count = 0, m, wordf;
-	char **p;
-	char *x;
 
-	if (*str == '\0' || str == NULL)
-		return (NULL);
-	for (i = 0; str[i] != '\0'; i++)
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+{
+	char *s;
+
+	if (new_size > old_size)
 	{
-		if (str[i] == ' ' && (str[i + 1] != ' ' || str[i + 1] == '\0'))
-			w++;
+		s = malloc(new_size);
+		free(ptr);
+		return (s);
 	}
-	p = (char **)malloc((w + 1) * sizeof(char *));
-	if (p == NULL)
-		return (NULL);
-	for (wordf = 0; str[wordf] && j <= w; wordf++)
+	if (new_size == old_size)
 	{
-		count = 0;
-		if (str[wordf] != ' ')
-		{
-			for (i = wordf ; str[i] != '\0'; i++)
-			{
-				if (str[i] == ' ')
-					break;
-				count++; }
-			*(p + j) = (char *)malloc((count + 1) * sizeof(char));
-			if (*(p + j) == NULL)
-			{
-				for (k = 0; k <= j; k++)
-				{x = p[k];
-					free(x); }
-				free(p);
-				return (NULL); }
-			for (m = 0; wordf < i; wordf++)
-			{p[j][m] = str[wordf];
-				m++; }
-			p[j][m] = '\0';
-			j++; }
+		return (ptr);
 	}
-	p[j] = NULL;
-	return (p); }
+	if (ptr == NULL)
+	{
+		s = malloc(new_size);
+		free(ptr);
+		return (s);
+	}
+	if (new_size == 0 && ptr != NULL)
+	{
+		free(ptr);
+		return (NULL);
+	}
+	return (ptr);
+}
